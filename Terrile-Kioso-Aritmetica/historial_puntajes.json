@@ -1,0 +1,42 @@
+[
+    {
+        "nombre": "hola",
+        "puntaje": 4,
+        "fecha": "2024-12-04 02:42:04"
+    },
+    {
+        "nombre": "chau",
+        "puntaje": 3,
+        "fecha": "2024-12-04 02:51:10"
+    },
+    {
+        "nombre": "tomas}",
+        "puntaje": 0,
+        "fecha": "2024-12-05 09:22:01"
+    },
+    {
+        "nombre": "pepe",
+        "puntaje": 1,
+        "fecha": "2024-12-05 09:22:09"
+    },
+    {
+        "nombre": "mateo8",
+        "puntaje": 25,
+        "fecha": "2024-12-05 10:23:04"
+    },
+    {
+        "nombre": "juan",
+        "puntaje": 0,
+        "fecha": "2024-12-05 10:23:25"
+    },
+    {
+        "nombre": "comeback",
+        "puntaje": 10,
+        "fecha": "2024-12-16 07:21:11"
+    },
+    {
+        "nombre": "ultiamsd",
+        "puntaje": 22,
+        "fecha": "2024-12-16 09:04:42"
+    }
+]
