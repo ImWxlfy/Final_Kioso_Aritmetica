@@ -29,7 +29,7 @@ def jugar_nivel(nivel: int, niveles: dict, vidas: int, puntuacion: int, comodine
         HEIGHT (int): Alto de la pantalla.
         screen (pygame.Surface): Superficie de la pantalla.
         estado_config (dict): Configuración actual del juego.
-        
+
     Returns:
         tuple: Éxito del nivel, actualización de vidas, puntuación y comodines disponibles.
     """
@@ -45,6 +45,8 @@ def jugar_nivel(nivel: int, niveles: dict, vidas: int, puntuacion: int, comodine
     seleccionar_nueva_pregunta = True
     tiempo_restante = tiempo_limite
     tiempo_congelado_flag = [False]
+    racha = 0
+
 
     while ronda <= 5 and vidas > 0:
         if seleccionar_nueva_pregunta:
@@ -80,6 +82,9 @@ def jugar_nivel(nivel: int, niveles: dict, vidas: int, puntuacion: int, comodine
 
         elif respuesta == "correcto":
             puntuacion += 1
+            racha += 1
+            puntos_adicionales = manejar_racha(racha)
+            puntuacion += puntos_adicionales
             ronda += 1
             seleccionar_nueva_pregunta = True
             tiempo_restante = tiempo_limite
@@ -89,6 +94,7 @@ def jugar_nivel(nivel: int, niveles: dict, vidas: int, puntuacion: int, comodine
             seleccionar_nueva_pregunta = False
 
         elif respuesta == "incorrecto" or respuesta == "tiempo_agotado":
+            racha = reducir_racha(racha)
             seleccionar_nueva_pregunta = True
             tiempo_congelado_flag = [False]
 
@@ -101,3 +107,34 @@ def jugar_nivel(nivel: int, niveles: dict, vidas: int, puntuacion: int, comodine
         detener_musica_func(current_music)
 
     return True, vidas, puntuacion, comodines_disponibles
+
+def manejar_racha(racha: int) -> int:
+    """
+    Lógica recursiva para manejar puntos adicionales por racha.
+
+    Args:
+        racha (int): Contador de racha actual.
+
+    Returns:
+        int: Puntos adicionales otorgados por la racha.
+    """
+    if racha < 3:
+        return 0
+    if racha == 3:
+        return 1
+    return manejar_racha(racha - 1)
+
+
+def reducir_racha(racha: int) -> int:
+    """
+    Lógica recursiva para reducir progresivamente la racha.
+
+    Args:
+        racha (int): Contador de racha actual.
+
+    Returns:
+        int: Racha después de reducirla progresivamente.
+    """
+    if racha <= 0:
+        return 0
+    return reducir_racha(racha - 2)

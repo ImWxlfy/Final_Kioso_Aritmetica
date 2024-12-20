@@ -38,5 +38,40 @@
         "nombre": "ultiamsd",
         "puntaje": 22,
         "fecha": "2024-12-16 09:04:42"
+    },
+    {
+        "nombre": "qwerty",
+        "puntaje": 6,
+        "fecha": "2024-12-20 11:47:14"
+    },
+    {
+        "nombre": "racahs",
+        "puntaje": 10,
+        "fecha": "2024-12-20 12:13:33"
+    },
+    {
+        "nombre": "asdasdasd",
+        "puntaje": 3,
+        "fecha": "2024-12-20 12:56:00"
+    },
+    {
+        "nombre": "adwqdasd",
+        "puntaje": 2,
+        "fecha": "2024-12-20 12:56:22"
+    },
+    {
+        "nombre": "wqedqwdqwdqwd",
+        "puntaje": 2,
+        "fecha": "2024-12-20 12:56:48"
+    },
+    {
+        "nombre": "123",
+        "puntaje": 1,
+        "fecha": "2024-12-20 12:57:11"
+    },
+    {
+        "nombre": "saeqwe",
+        "puntaje": 1,
+        "fecha": "2024-12-20 12:57:25"
     }
 ]
